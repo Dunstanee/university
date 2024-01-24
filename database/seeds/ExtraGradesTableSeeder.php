@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Database\Seeder;
 
 // composer require laracasts/testdummy
@@ -9,7 +10,7 @@ class ExtraGradesTableSeeder extends Seeder
 {
     public function run()
     {
-        $user = \App\User::findOrFail(9);
+        $user = User::findOrFail(7);
             // add a grade for each user for each class
 
         foreach (\App\UniClass::all() as $class) {
